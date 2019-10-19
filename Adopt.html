@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+    <head>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Cat Adoption</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css"> 
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+        <script src="JS/carouFredSel.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="JS/carouFredSel.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    </head>
+    <body>
+    
+    <header>
+        
+        <div class="container">
+            <div class="row">
+                <a href="" class="logo"><img src="Image/cat1.png" height="100" width="100"></a>
+                <h>Jordan Cat Adoption</h>
+                
+                <nav>
+                  
+                    <ul>
+                        
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="Contact.html"> About</a></li>
+                        <li><a href="Adopt.html"> Adopt</a></li>
+                        
+                        
+                    </ul>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <p>
+        ADOPT        
+    </p>
+    
+  
+       <div class="box">
+           
+          <h4>To adopt a cat from our shelter, kindly fill the form below:</h4>
+       </div>    
+  
+     
+        <form>
+         <br> 
+         <input type="text" name="Name" placeholder="Name of Cat" id="name"><br>
+         <input type="text" name="Breed" placeholder="Breed of Cat" id="breed"><br>
+         <input type="number" name="Age" placeholder="Age of Cat" id="age"><br>
+         <input type="text" name="Color" placeholder="Color of Cat" id="color"><br><br>
+            <button  onclick="addRow(); return false;" >See Selected Cats</button>
+         <br>
+         
+     </form>
+
+        <br>
+        <br>
+        <br>
+            
+        <div class="box">
+           
+          <h4>You have selected the following cats:</h4>
+       </div>    
+  
+           <table border="1">
+            
+            <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th>Color</th>
+            </tr>
+               
+            <tr>
+                <th><output form="name"></output></th>
+                <th><output form="breed"></output></th>
+                <th><output form="age"></output></th>
+                <th><output form="color"></output></th>
+            </tr>
+          
+        </table>
+      
+           
+           
+        <script>
+            
+            function addRow()
+            {
+                // get input values
+                var name = document.getElementById('name').value;
+                var breed = document.getElementById('breed').value;
+                var age = document.getElementById('age').value;
+                var color = document.getElementById('color').value;
+                
+
+                
+                  
+               var table = document.getElementsByTagName('table')[0];
+                  
+                 
+                  var rowcount = table.rows.length-1;
+                  var newRow = table.insertRow(rowcount);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  var cel4 = newRow.insertCell(3);
+                  
+                  // add values to the cells
+                  cel1.innerHTML = name;
+                
+                  cel2.innerHTML = breed;
+                
+                  cel3.innerHTML = age;
+                
+                  cel4.innerHTML = color;
+                
+                
+            }
+        </script>
+                    
+    
+
+  
+    </body>
+</html>
